@@ -1,0 +1,21 @@
+<%- include('partials/header'); -%>
+
+<h1>Home</h1>
+
+<p><%= startContent %></p>
+
+<% postList.forEach(function(post){ %>
+    <% let trBody = post.body.substring(0, 100); %>
+
+    <h1><%= post.title %></h1>
+    <p><%= trBody %>... <a href="/posts/<%= post.title %>">Read More</a></p>
+<% }); %>
+
+<!-- this is another way of looping through posts -->
+
+<!-- <% for(let i = 0; i < postList.length; i++){ %>
+    <h2><%= postList[i].title %></h2>
+    <p><%= postList[i].body %></p>
+<% }; %> -->
+
+<%- include('partials/footer'); -%>
