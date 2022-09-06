@@ -8,7 +8,7 @@
     <% let trBody = post.body.substring(0, 100); %>
 
     <h1><%= post.title %></h1>
-    <p><%= trBody %>... <a href="/posts/<%= post.title %>">Read More</a></p>
+    <p><%= trBody %>... <a href="/posts/<%= post._id %>">Read More</a></p>
 <% }); %>
 
 <!-- this is another way of looping through posts -->
